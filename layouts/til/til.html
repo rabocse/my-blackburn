@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1> TIL - Today I Learned </h1>
+</div>
+
+<div class="content">
+
+
+  <h2>What Will You (and I) find here? </h2>
+
+	<li> Things I learn on a daily basis and I think (for some reason) are worth writing (don't ask me why!).</li>
+
+	<li> Things I "know" but I tend to "forget".</li>
+
+	<li> Things that perhaps initially do not require the full dedication and editing of a blog post. </li>
+
+
+	<h2>Why this section?</h2>
+
+  <li>Another effort at public learning.</li>
+
+  <li>Have you noticed how much you potentially learn (or at least you get familiar) any time you go "down the rabbit hole" at a certain topic or problem? It never gets documented... </li>
+
+  <li>Writing a "full post" is not that straightforward for me. Assuming I have the topic or idea to write about, the sanitizing, editing, etc etc. it just takes time! Here it will be more spontaneous. </li> 
+
+  <li>Why Google it if I know I have my answer here?</li>
+
+  <li>I believe in some of the benefits of journaling</li>
+
+
+	<h2>Inspired By?</h2>
+
+  <li> I would like to say I came up with this interesting idea but... no!, I believe Josh was the one: https://github.com/jbranchaud/til.</li>
+
+  <h2>Entry log:</h2>
+
+</div>
+
+<div class="content">
+  {{ range .Data.Pages.GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2>
+  <ul>
+  {{ range .Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

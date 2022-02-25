@@ -9,10 +9,7 @@
 ...
   {{ partial "post_meta.html" . }}
 
-  Contenido...
   {{ .Content }}
-
-  Contenido...
   
   {{ partial "share.html" . }}
 
@@ -23,8 +20,6 @@
   {{ partial "disqus.html" . }}
 
   {{ partial "telegram.html" . }}
-
-  Contenido...
 ...
 </div>
 
